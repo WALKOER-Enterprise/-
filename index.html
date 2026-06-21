@@ -144,7 +144,6 @@
         const waveBars = document.getElementById('wave-bars');
         const splash = document.getElementById('splash-screen');
 
-        // --- ENGINE UNTUK MENYALAKAN AUDIO SQUEEZE (LOLOS BLOKIR BROWSER) ---
         function startSystem() {
             splash.style.opacity = "0";
             splash.style.pointerEvents = "none";
@@ -174,7 +173,6 @@
             }
         }
 
-        // --- DYNAMIC PROJECT FILTERING ---
         function filterProjects(category) {
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
@@ -193,7 +191,6 @@
             });
         }
 
-        // --- MODAL SYSTEM ---
         function openModal(title, description) {
             document.getElementById('modal-title').innerText = title;
             document.getElementById('modal-desc').innerText = description;
@@ -206,7 +203,6 @@
             }
         }
 
-        // --- MONOCHROME STARDUST CANVAS ENGINE ---
         const canvas = document.getElementById('ultimate-net');
         const ctx = canvas.getContext('2d');
         let particles = [];

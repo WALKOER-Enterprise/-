@@ -18,7 +18,7 @@
     --font-ui: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-/* === STYLE UTAMA SPLASH SCREEN === */
+/* === FIX TOTAL STYLE SPLASH SCREEN BIAR TIDAK KE KIRI === */
 #splash-screen {
     position: fixed;
     top: 0; left: 0;
@@ -26,14 +26,23 @@
     background-color: #000000;
     z-index: 9999;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 0 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .splash-title {
@@ -42,8 +51,10 @@
     font-weight: 400;
     color: var(--text-primary);
     letter-spacing: 6px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 100%;
 }
 
 .splash-subtitle {
@@ -53,6 +64,8 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
 }
 
 .enter-btn {
@@ -62,11 +75,13 @@
     font-family: var(--font-ui);
     font-size: 0.8rem;
     font-weight: 600;
-    padding: 12px 30px;
+    padding: 14px 32px;
     letter-spacing: 2px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .enter-btn:hover {
@@ -308,10 +323,34 @@ footer { margin-top: 80px; text-align: center; font-size: 0.75rem; color: var(--
 @keyframes rotateGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 @keyframes equalizer { 0% { height: 2px; } 100% { height: 14px; } }
 
-/* === TAMPILAN RESPONSIF UNTUK HANDPHONE (FIX OVERFLOW) === */
+/* === FIX MEDIA QUERY HP (SANGAT AKURAT UNTUK SPLASH SCREEN & JUDUL) === */
 @media (max-width: 600px) {
     .container { 
         padding: 0 16px; 
+    }
+    
+    /* Memaksa text splash screen berada di tengah mutlak */
+    .splash-content {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .splash-title { 
+        font-size: 1.5rem; 
+        letter-spacing: 3px; 
+        text-align: center;
+    }
+
+    .splash-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .enter-btn {
+        padding: 12px 26px;
+        font-size: 0.75rem;
     }
     
     header h1 { 
@@ -341,10 +380,5 @@ footer { margin-top: 80px; text-align: center; font-size: 0.75rem; color: var(--
     .links-list { 
         gap: 16px; 
         flex-wrap: wrap;
-    }
-    
-    .splash-title { 
-        font-size: 1.6rem; 
-        letter-spacing: 4px; 
     }
 }

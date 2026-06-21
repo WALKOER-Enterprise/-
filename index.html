@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- SPLASH SCREEN LOBBY (Pemicu Suara Agar Lolos Blokir Browser) -->
     <div id="splash-screen">
         <div class="splash-content">
             <h2 class="splash-title">♱ VEIL PROTOCOL ♱</h2>
@@ -17,19 +16,15 @@
         </div>
     </div>
 
-    <!-- AUDIO SYSTEM (Loop Berulang) -->
     <audio id="bg-music" src="辞九门回忆.mp3" loop></audio>
 
-    <!-- VIDEO BACKGROUND SYSTEM -->
     <video loop muted playsinline id="video-bg">
         <source src="celestial-veil.1920x1080.mp4" type="video/mp4">
     </video>
     
-    <!-- Canvas Efek Partikel Perak -->
     <canvas id="ultimate-net"></canvas>
     <div class="cyber-overlay"></div>
 
-    <!-- NAVIGATION BAR -->
     <nav>
         <div class="nav-container">
             <a href="#" class="nav-logo">♱ NEXUS<span class="dot">.</span></a>
@@ -40,7 +35,6 @@
                     <a href="#projects">✦ Proyek</a>
                 </div>
                 
-                <!-- Audio Controller & Wave Equalizer -->
                 <div class="audio-control-container" onclick="toggleMusic()">
                     <div class="audio-wave" id="wave-bars">
                         <span></span>
@@ -54,10 +48,8 @@
         </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <div class="container">
         
-        <!-- HERO HEADER WITH ETHEREAL AVATAR -->
         <header>
             <div class="avatar-wrapper">
                 <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80" alt="Profile Avatar" class="profile-avatar">
@@ -69,7 +61,6 @@
             <p class="subtitle">Network Administrator & Automated System Designer</p>
         </header>
 
-        <!-- TENTANG SAYA -->
         <section id="about">
             <h2>♱ About System</h2>
             <p class="about-text">
@@ -77,7 +68,6 @@
             </p>
         </section>
 
-        <!-- KEAHLIAN / SKILLS -->
         <section id="skills">
             <h2>♱ Core Competencies</h2>
             <div class="skills-grid">
@@ -89,7 +79,6 @@
             </div>
         </section>
 
-        <!-- PROYEK DENGAN FILTER DINAMIS -->
         <section id="projects">
             <h2>♱ Selected Projects</h2>
             
@@ -124,7 +113,6 @@
             </div>
         </section>
 
-        <!-- HUBUNGI / KONTAK -->
         <section id="contact">
             <h2>♱ Connect</h2>
             <div class="links-list">
@@ -134,14 +122,12 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer>
             <p>&copy; 2026 Nama Anda. Veil Protocol Integrated.</p>
         </footer>
 
     </div>
 
-    <!-- POP-UP MODAL -->
     <div id="ultimate-modal" class="modal" onclick="closeModal(event)">
         <div class="modal-content">
             <span class="close-btn" onclick="document.getElementById('ultimate-modal').classList.remove('active')">&times;</span>
@@ -151,7 +137,6 @@
         </div>
     </div>
 
-    <!-- CODE LOGIC ENGINE -->
     <script>
         const audioSystem = document.getElementById('bg-music');
         const videoSystem = document.getElementById('video-bg');
@@ -161,21 +146,17 @@
 
         // --- ENGINE UNTUK MENYALAKAN AUDIO SQUEEZE (LOLOS BLOKIR BROWSER) ---
         function startSystem() {
-            // Hilangkan layar splash screen dengan efek transisi memudar
             splash.style.opacity = "0";
             splash.style.pointerEvents = "none";
             
-            // Nyalakan video background secara berbarengan
             videoSystem.play();
 
-            // Paksa musik berputar tepat setelah interaksi klik tombol masuk
             audioSystem.play().then(() => {
                 waveBars.classList.add('playing');
             }).catch(err => {
                 console.log("Gagal memutar audio otomatis:", err);
             });
             
-            // Jalankan animasi canvas setelah sistem terbuka
             loop();
         }
 

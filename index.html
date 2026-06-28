@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Ethereal Cyber-Gothic</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div id="splash-screen">
         <div class="splash-content">
-            <h2 class="splash-title">♱ VEIL PROTOCOL ♱</h2>
+            <h2 class="splash-title">♱ GOP PROTOCOL ♱</h2>
             <p class="splash-subtitle">Audio & Visual Link Ready</p>
             <button class="enter-btn" onclick="startSystem()">[ INITIALIZE SYSTEM ]</button>
         </div>
@@ -21,20 +23,20 @@
     <video loop muted playsinline id="video-bg">
         <source src="celestial-veil.1920x1080.mp4" type="video/mp4">
     </video>
-    
+
     <canvas id="ultimate-net"></canvas>
     <div class="cyber-overlay"></div>
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">♱ NEXUS<span class="dot">.</span></a>
+            <a href="#" class="nav-logo">♱ GOP </a>
             <div class="nav-right-wrapper">
                 <div class="nav-links">
                     <a href="#about">✦ Tentang</a>
                     <a href="#skills">✦ Keahlian</a>
                     <a href="#projects">✦ Proyek</a>
                 </div>
-                
+
                 <div class="audio-control-container" onclick="toggleMusic()">
                     <div class="audio-wave" id="wave-bars">
                         <span></span>
@@ -49,39 +51,46 @@
     </nav>
 
     <div class="container">
-        
+
         <header>
             <div class="avatar-wrapper">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80" alt="Profile Avatar" class="profile-avatar">
+                <img src="short-girl.jpg" alt="Profile Avatar" class="profile-avatar">
                 <div class="avatar-glow"></div>
             </div>
-            
+
             <div class="badge">✦ TJKT System Architect</div>
-            <h1>Halo, Saya <span class="shimmer-text">Nama Anda</span></h1>
+            <h1>Halo, Saya <span class="shimmer-text">Jayy</span></h1>
             <p class="subtitle">Network Administrator & Automated System Designer</p>
         </header>
 
         <section id="about">
             <h2>♱ About System</h2>
             <p class="about-text">
-                Fokus mendalam pada arsitektur infrastruktur jaringan, konfigurasi *secure server* berbasis Linux, dan otomatisasi sistem. Gemar mengeksplorasi teknologi *open-source*, manajemen *database* relasional, serta optimasi performa lingkungan digital dengan pendekatan minimalis yang bersih.
+                Fokus mendalam pada arsitektur infrastruktur jaringan, konfigurasi *secure server* berbasis Linux, dan
+                otomatisasi sistem. Gemar mengeksplorasi teknologi *open-source*, manajemen *database* relasional, serta
+                optimasi performa lingkungan digital dengan pendekatan minimalis yang bersih.
             </p>
         </section>
 
         <section id="skills">
             <h2>♱ Core Competencies</h2>
             <div class="skills-grid">
-                <span class="skill-tag" onclick="openModal('Linux Server Architecture', 'Keahlian mendalam dalam deployment Debian dan Arch Linux Server, hardening keamanan SSH, otomatisasi cron-jobs, manajemen web server (Nginx/Samba), serta tuning performa database MySQL.')">🐧 Linux Server</span>
-                <span class="skill-tag" onclick="openModal('Advanced Cisco Networking', 'Perancangan topologi skala enterprise menggunakan Cisco Packet Tracer. Mampu mengimplementasikan routing dinamis OSPF/EIGRP, inter-VLAN routing, STP untuk mencegah loop, serta Access Control List (ACL).')">🔌 Cisco Networking</span>
-                <span class="skill-tag" onclick="openModal('Network Traffic Analysis', 'Analisis paket data mendalam dan monitoring lalu lintas jaringan menggunakan Wireshark untuk mendeteksi anomali, bottleneck, maupun potensi serangan siber.')">🔒 Network Security</span>
-                <span class="skill-tag" onclick="openModal('Automation Scripting', 'Pengembangan skrip Python mandiri untuk kebutuhan monitoring otomatis internal server, backup data berkala, dan interaksi API sistem.')">🐍 Python Scripting</span>
-                <span class="skill-tag" onclick="openModal('Virtualization Environment', 'Pengalaman membangun virtualisasi server lokal yang efisien menggunakan Proxmox VE dan Oracle VirtualBox untuk simulasi jaringan kompleks.')">🌌 Virtualization</span>
+                <span class="skill-tag"
+                    onclick="openModal('Linux Server Architecture', 'Keahlian mendalam dalam deployment Debian dan Arch Linux Server, hardening keamanan SSH, otomatisasi cron-jobs, manajemen web server (Nginx/Samba), serta tuning performa database MySQL.')">🐧
+                    Linux Server</span>
+                <span class="skill-tag"
+                    onclick="openModal('Advanced Cisco Networking', 'Perancangan topologi skala enterprise menggunakan Cisco Packet Tracer. Mampu mengimplementasikan routing dinamis OSPF/EIGRP, inter-VLAN routing, STP untuk mencegah loop, serta Access Control List (ACL).')">🔌
+                    Cisco Networking</span>
+
+                <span class="skill-tag"
+                    onclick="openModal('Virtualization Environment', 'Pengalaman membangun virtualisasi server lokal yang efisien menggunakan Proxmox VE dan Oracle VirtualBox untuk simulasi jaringan kompleks.')">🌌
+                    Virtualization</span>
             </div>
         </section>
 
         <section id="projects">
             <h2>♱ Selected Projects</h2>
-            
+
             <div class="filter-wrapper">
                 <button class="filter-btn active" onclick="filterProjects('all')">✦ All</button>
                 <button class="filter-btn" onclick="filterProjects('network')">🌐 Networking</button>
@@ -89,25 +98,29 @@
             </div>
 
             <div class="card-list" id="project-container">
-                <div class="card" data-category="network" onclick="openModal('Enterprise Infrastructure Design', 'Merancang dan mensimulasikan arsitektur jaringan korporat terdistribusi tinggi menggunakan Cisco Packet Tracer. Mengintegrasikan protokol routing dinamis OSPF multi-area, manajemen segmentasi VLAN, sistem keamanan NAT, dan redundancy link guna menjamin uptime jaringan 99.9%.')">
+                <div class="card" data-category="network"
+                    onclick="openModal('Enterprise Infrastructure Design', 'Merancang dan mensimulasikan arsitektur jaringan korporat terdistribusi tinggi menggunakan Cisco Packet Tracer. Mengintegrasikan protokol routing dinamis OSPF multi-area, manajemen segmentasi VLAN, sistem keamanan NAT, dan redundancy link guna menjamin uptime jaringan 99.9%.')">
                     <div class="card-header">
                         <span class="card-category">🌐 Networking</span>
                         <div class="card-date">2026</div>
                     </div>
                     <div class="card-title">Simulasi Topologi Jaringan Enterprise ↗</div>
                     <div class="card-desc">
-                        Merancang infrastruktur jaringan skala menengah menggunakan Cisco Packet Tracer, mengimplementasikan routing dinamis (OSPF), VLAN, dan keamanan firewall.
+                        Merancang infrastruktur jaringan skala menengah menggunakan Cisco Packet Tracer,
+                        mengimplementasikan routing dinamis (OSPF), VLAN, dan keamanan firewall.
                     </div>
                 </div>
 
-                <div class="card" data-category="server" onclick="openModal('Debian Production Home-Server', 'Membangun server lokal berbasis Debian. Mengonfigurasi Samba Share dengan hak akses terenkripsi, deployment server basis data MySQL untuk kebutuhan aplikasi internal, serta monitoring resource menggunakan skrip otomatisasi.')">
+                <div class="card" data-category="server"
+                    onclick="openModal('Debian Production Home-Server', 'Membangun server lokal berbasis Debian. Mengonfigurasi Samba Share dengan hak akses terenkripsi, deployment server basis data MySQL untuk kebutuhan aplikasi internal, serta monitoring resource menggunakan skrip otomatisasi.')">
                     <div class="card-header">
                         <span class="card-category">🖥️ System / Server</span>
                         <div class="card-date">2026</div>
                     </div>
                     <div class="card-title">Konfigurasi Home Server Lokal berbasis Debian ↗</div>
                     <div class="card-desc">
-                        Membangun server lokal berbasis Debian untuk kebutuhan file sharing (Samba), web server internal, dan manajemen database MySQL.
+                        Membangun server lokal berbasis Debian untuk kebutuhan file sharing (Samba), web server
+                        internal, dan manajemen database MySQL.
                     </div>
                 </div>
             </div>
@@ -116,149 +129,34 @@
         <section id="contact">
             <h2>♱ Connect</h2>
             <div class="links-list">
-                <a href="https://github.com" target="_blank" class="link-item">💻 GitHub <span class="arrow">↗</span></a>
-                <a href="https://linkedin.com" target="_blank" class="link-item">👔 LinkedIn <span class="arrow">↗</span></a>
-                <a href="mailto:emailmu@domain.com" class="link-item">✉️ Email <span class="arrow">↗</span></a>
+                <a href="https://github.com/WALKOER44" target="_blank" class="link-item">💻 GitHub <span
+                        class="arrow">↗</span></a>
+                <a href="https://www.tiktok.com/@budak_rtm44" target="_blank" class="link-item">🎵 TikTok <span
+                        class="arrow">↗</span></a>
+                <a href="https://youtube.com/@walkoer-n9i?si=gsKMuB8hXhq_1Ewe" target="_blank" class="link-item">📺
+                    YouTube <span class="arrow">↗</span></a>
+                <a href="https://open.spotify.com/user/31mxlzefpzevraegtb7paovc2ai4?si=3505209a4a154c08" target="_blank"
+                    class="link-item">🎧 Spotify <span class="arrow">↗</span></a>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2026 Nama Anda. Veil Protocol Integrated.</p>
+            <p>&copy; BY WALKOER & 2026. GOP Protocol Integrated.</p>
         </footer>
 
     </div>
 
     <div id="ultimate-modal" class="modal" onclick="closeModal(event)">
         <div class="modal-content">
-            <span class="close-btn" onclick="document.getElementById('ultimate-modal').classList.remove('active')">&times;</span>
+            <span class="close-btn"
+                onclick="document.getElementById('ultimate-modal').classList.remove('active')">&times;</span>
             <div class="modal-badge">✦ System Knowledge Detail</div>
             <h3 id="modal-title">Project Title</h3>
             <p id="modal-desc">Detailed descriptions will append here dynamically...</p>
         </div>
     </div>
 
-    <script>
-        const audioSystem = document.getElementById('bg-music');
-        const videoSystem = document.getElementById('video-bg');
-        const musicButton = document.getElementById('music-toggle');
-        const waveBars = document.getElementById('wave-bars');
-        const splash = document.getElementById('splash-screen');
-
-        function startSystem() {
-            splash.style.opacity = "0";
-            splash.style.pointerEvents = "none";
-            
-            videoSystem.play();
-
-            audioSystem.play().then(() => {
-                waveBars.classList.add('playing');
-            }).catch(err => {
-                console.log("Gagal memutar audio otomatis:", err);
-            });
-            
-            loop();
-        }
-
-        function toggleMusic() {
-            if (audioSystem.paused) {
-                audioSystem.play();
-                musicButton.innerText = "🔊";
-                waveBars.classList.add('playing');
-                document.querySelector('.audio-control-container').classList.remove('muted');
-            } else {
-                audioSystem.pause();
-                musicButton.innerText = "🔇";
-                waveBars.classList.remove('playing');
-                document.querySelector('.audio-control-container').classList.add('muted');
-            }
-        }
-
-        function filterProjects(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = "block";
-                    setTimeout(() => { card.style.opacity = "1"; card.style.transform = "scale(1)"; }, 10);
-                } else {
-                    card.style.opacity = "0";
-                    card.style.transform = "scale(0.95)";
-                    setTimeout(() => { card.style.display = "none"; }, 300);
-                }
-            });
-        }
-
-        function openModal(title, description) {
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-desc').innerText = description;
-            document.getElementById('ultimate-modal').classList.add('active');
-        }
-
-        function closeModal(event) {
-            if (event.target.id === 'ultimate-modal') {
-                document.getElementById('ultimate-modal').classList.remove('active');
-            }
-        }
-
-        const canvas = document.getElementById('ultimate-net');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-
-        function initCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', initCanvas);
-        initCanvas();
-
-        class Node {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.3;
-                this.vy = (Math.random() - 0.5) * 0.3;
-                this.radius = Math.random() * 1.2 + 0.8;
-            }
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
-                ctx.fill();
-            }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-            }
-        }
-
-        for (let i = 0; i < 35; i++) particles.push(new Node());
-
-        function loop() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => { p.update(); p.draw(); });
-
-            for (let i = 0; i < particles.length; i++) {
-                for (let j = i + 1; j < particles.length; j++) {
-                    let dx = particles[i].x - particles[j].x;
-                    let dy = particles[i].y - particles[j].y;
-                    let dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 130) {
-                        ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${0.06 - (dist/130)*0.06})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-            }
-            requestAnimationFrame(loop);
-        }
-    </script>
+    <script src="main.js"></script>
 </body>
+
 </html>

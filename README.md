@@ -1,4 +1,4 @@
-# ♱ NEXUS - Ethereal Cyber-Gothic Portfolio ♱
+# ♱ GOP PROTOCOL - Ethereal Cyber-Gothic Portfolio ♱
 
 Sebuah web portofolio pribadi yang menggabungkan estetika gelap gotik kontemporer (*Cyber-Gothic / Dark Mythological*) dengan fungsionalitas modern yang bersih (*clean interface*). Dirancang khusus untuk memamerkan keahlian di bidang teknik jaringan, arsitektur server Linux, dan otomatisasi sistem (TJKT).
 
@@ -22,7 +22,9 @@ Web ini mengintegrasikan latar belakang video bergerak dan musik latar yang berp
 ## 📂 Struktur Repositori
 
 ```pascal
-├── index.html                  # File struktur utama dan logika JavaScript
+├── index.html                  # File struktur utama
 ├── style.css                   # File desain visual, variabel monokrom, dan animasi
+├── main.js                     # File logika JavaScript untuk filter, audio, modal, dan partikel
+├── short-girl.jpg              # File foto profil (Avatar)
 ├── 辞九门回忆.mp3               # File audio musik latar (Looping)
 └── celestial-veil.1920x1080.mp4 # File video latar belakang (Autoplay & Muted)
